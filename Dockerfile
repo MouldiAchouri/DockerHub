@@ -1,4 +1,5 @@
 # Utiliser Ubuntu 20.04
+# Utiliser Ubuntu 20.04
 FROM ubuntu:20.04
 
 # Éviter les questions interactives pendant l'installation
@@ -22,4 +23,3 @@ RUN ln -sv /usr/share/cowsay/cows/docker.cow /usr/share/cowsay/cows/default.cow
 # Définir cowsay comme ENTRYPOINT et un message par défaut
 ENTRYPOINT ["cowsay"]
 CMD ["Hello!"]
-
