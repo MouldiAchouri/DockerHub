@@ -78,9 +78,19 @@ ensuite il faut créer docker.cow. Il va utiliser l'image ci-dessous pour affich
 ⠼⠁⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣆⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠘⢆
 EOC
 
+2) Construire le docker compose qui contiendra ceci 
 
+version: '3.8'
+ 
+services:
+  luffy_cowsay:
+    build: .
+    # image: luffy-cowsay:latest  # La ligne commentée n'est pas le problème
+   
+    environment:
+      - "bienvenue a bord"
 
-2) Construction et taguer l'image
+3) Construction et taguer l'image
 
 Après avoir créer le dockerfile, il faut le construire et la taguer avec la commande suivante dans le format de docker hub. pour la commande suivante, il faut être dans le répertoire qui contient dockerfile
 
@@ -91,7 +101,7 @@ $docker build -t [nom d'utilisateur dockerhub]/[nom de l'image]:1.0 .
 ensuite utiliser $docker images pour vérifier la création de l'image
 
 
-3) Publier sur docker hub
+4) Publier sur docker hub
 
 $docker push [nom d'utilisateur]/[nom de l'image]:1.0 
 
