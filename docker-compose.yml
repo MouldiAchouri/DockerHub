@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  luffy_cowsay:
+    build: . 
+    # image: luffy-cowsay:latest  # La ligne commentée n'est pas le problème
+    
+    environment:
+      - "bienvenu a bord"

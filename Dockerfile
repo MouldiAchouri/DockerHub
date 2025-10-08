@@ -21,5 +21,9 @@ COPY docker.cow /usr/share/cowsay/cows/
 RUN ln -sv /usr/share/cowsay/cows/docker.cow /usr/share/cowsay/cows/default.cow
 
 # Définir cowsay comme ENTRYPOINT et un message par défaut
+# ... (votre installation et ENTRYPOINT restent inchangés) ...
+
+# Définir cowsay comme ENTRYPOINT
 ENTRYPOINT ["cowsay"]
 CMD ["Hello!"]
+
